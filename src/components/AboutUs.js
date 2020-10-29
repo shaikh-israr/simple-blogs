@@ -1,12 +1,12 @@
 import React from 'react'
 import '../App'
-
+import image1 from './static/dhoni.jpg'
 function AboutUs() {
 
     return (
         <div >
-            <div>
-                <img src={process.env.PUBLIC_URL + "./static/dhoni.jpg"} alt="image" style={{height:"255px", width:"100%"}}/>
+            <div className="App-Img">
+                <img src={ image1 } style={{height:"255px", width:"100%"}} alt="" />
             </div>
             <div className="App">
                 <h2>Indian Cricket Club</h2>
