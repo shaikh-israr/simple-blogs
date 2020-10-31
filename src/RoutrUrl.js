@@ -7,17 +7,17 @@ import {
 import AboutUs from './components/AboutUs'
 import ContactUs from './components/ContactUs'
 import PlayerPages from './components/PlayerPage'
-import ContentPage from './components/PlayerPage'
-import ScrollToTop from "./ScrollToTop";
+import ContentPage from './components/ContentPage'
+import NavBar from './components/NavBar';
 function RoutrUrl() {
     return (
         <Router>
-            <ScrollToTop />
+            <NavBar />
                 <Switch>
-                    <Route paht="/" exact component={ContentPage} />
-                    <Route paht="/players" component={PlayerPages} /> 
-                    <Route paht="/contactus" component={ContactUs} />
-                    <Route paht="/about" component={AboutUs} />
+                    <Route path="/" exact component={ContentPage} />
+                    <Route path="/players" component={PlayerPages} /> 
+                    <Route path="/contactus" component={ContactUs} />
+                    <Route path="/about" component={AboutUs} />
                 </Switch>
         </Router>
     )

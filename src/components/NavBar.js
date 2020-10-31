@@ -6,7 +6,7 @@ import { makeStyles } from '@material-ui/core/styles'
 import HomeIcon from '@material-ui/icons/Home';
 import InfoIcon from '@material-ui/icons/Info';
 import ContactsIcon from '@material-ui/icons/Contacts';
-import { Link, BrowserRouter as Router, } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 
 const useStyle = makeStyles((theme) => ({
@@ -21,7 +21,6 @@ function NavBar() {
     }
     return (
         <>
-        <Router>
         <div>
             <AppBar position="static">
                 <Toolbar>
@@ -54,7 +53,7 @@ function NavBar() {
             >
                 <div style={{height:"100%", width:"220px"}}>
                     <List>
-                        <Link exact to="/" className={classes.link}>
+                        <Link to="/" className={classes.link}>
                         <ListItem button>
                             <ListItemIcon>
                                 <HomeIcon />
@@ -67,7 +66,7 @@ function NavBar() {
                         </ListItem>
                         </Link>
 
-                        <Link exact to="/players" className={classes.link}>
+                        <Link to="/players" className={classes.link}>
                             <ListItem button>
                                 <ListItemIcon>
                                     <GroupIcon />
@@ -80,7 +79,7 @@ function NavBar() {
                             </ListItem>
                         </Link>
 
-                        <Link exact to="/about" className={classes.link}>
+                        <Link to="/about" className={classes.link}>
                             <ListItem button>
                                 <ListItemIcon>
                                     <InfoIcon />
@@ -93,7 +92,7 @@ function NavBar() {
                             </ListItem>
                         </Link>
 
-                        <Link exact to={"/contactus"} className={classes.link}>
+                        <Link to="/contactus" className={classes.link}>
                             <ListItem button>
                                 <ListItemIcon>
                                     <ContactsIcon />
@@ -108,12 +107,7 @@ function NavBar() {
                     </List>
                 </div>
             </Drawer>
-            
-
-            
-
         </div>
-        </Router>
         </>
     )
 }
